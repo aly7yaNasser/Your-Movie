@@ -1,0 +1,12 @@
+.user :hover{
+    visibility: visible;
+}
+.col-start-2{
+    padding-left: 10px;
+    padding-right: 10px;
+    
+
+}
+.checked {
+    color: orange;
+  }

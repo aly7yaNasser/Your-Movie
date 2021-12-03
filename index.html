@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Movie</title>
+  <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/tStyle.css">
+  <!-- <link rel="stylesheet" href="/css/webslides.css"> -->
+
+
+
+
+  <!-- <script src="https://kit.fontawesome.com/a55ca2877b.js" crossorigin="anonymous"></script> -->
+  <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/movieURL.js"></script>
+
+  <script src="js/app.js"></script>
+
+</head>
+
+<body>
+
+
+  <nav class="bg-gray-800">
+    <div class="grid grid-cols-12 space-x-2">
+
+      <div class=" col-start-2 col-span-2 text-red-600 self-end ">
+        <div class="grid grid-cols-4">
+          <div class="col-span-1">
+            <img class="" src="/img/icon.png" alt="">
+          </div>
+          <div class="col-span-3 text-2xl self-center">
+            Your Movie
+          </div>
+        </div>
+      </div>
+
+      <div class="text-white self-center text-center  text-1xl  col-start-4 rounded-lg hover:bg-red-600" id="moviesBar">
+        <a href="#" class="   "> Movies </a>
+      </div>
+      <div class="text-white self-center text-center  pl-1 text-1xl rounded-lg col-start-auto hover:bg-red-600"
+        id="moviesBar">
+        <a href="#"> Series </a>
+      </div>
+
+      <div class="col-span-3"></div>
+
+
+      <div
+        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-span-1 hover:bg-red-600  ">
+        <a href="#">
+          fav list </a>
+      </div>
+
+      <div
+        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-span-1  hover:bg-red-600  ">
+        <a href="#">
+          watch later </a>
+      </div>
+
+      <div
+        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-span-1  hover:bg-red-600 ">
+        <a href="#">
+          Sign out </a>
+      </div>
+
+
+
+
+
+    </div>
+  </nav>
+  <div class="grid grid-cols-12 h-64 drop-shadow-2xl  ">
+    <div class=" col-start-2 col-end-12 h-64 ">
+
+      <div class="bg-gray-800 grid grid-cols-6 h-10 grid-rows-1 items-center gap-x-0 space-x-0">
+        <div class="col-span-2"></div>
+        <div class="col-span-2 grid grid-rows-1 space-x-0 gap-0 ">
+          <div class="col-span-1 bg-red-600">
+          <input class=" rounded-sm border-2 border-red-600 w-80   " type="text" name="" id="" placeholder="Movie name" />
+          <i class="text-white text-center"> Search </i>
+          </div>
+          
+       </div>
+        <div class="col-span-1"></div>
+
+      </div>
+
+      <!-- <div class="col-start-4 col-end-9 bg-red-600 object-top"></div> -->
+
+      <!-- </div> -->
+
+      <div>
+        <h3 class="text-white h-5"></h3>
+      </div>
+
+      <div>
+        <h1 class="text-red-600 text-3xl">In theater </h1>
+      </div>
+
+      <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  ">
+
+        <div class="col-span-1 ">
+          <div class="group relative ">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-50 lg:h-60 lg:aspect-none">
+              <img id="purImg1" src="" alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full" >
+            </div>
+            <div class="mt-4 flex justify-between">
+              <div>
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purTitle1">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+              </div>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate1">$35</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-span-1">
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="purImg2" src="" alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <div>
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purTitle2">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+              </div>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate2" </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1 ">
+
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="purImg3" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <div>
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purTitle3">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+              </div>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate3"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="col-span-1 ">
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="purImg4" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <div class="">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purTitle4">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+
+                </h3>
+
+              </div>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate10"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1 ">
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="purImg5" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="purTitle5">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate5"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  ">
+
+        <div class="col-span-1 ">
+          <div class="group relative">
+            <div
+              class="w-full min-h-30 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="purImg6" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="purTitle6">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate6"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1">
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="purImg7" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="purTitle7">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate7"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1 ">
+
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="purImg8" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="purTitle8">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate8"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-span-1 ">
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="purImg9" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="purTitle9">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate9"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1 ">
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="purImg10"
+                src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="purTitle10">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate10"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div>
+        <h1 class="text-red-600 text-3xl ">Papular Movies </h1>
+      </div>
+
+      <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  ">
+
+        <div class="col-span-1">
+          <div class="group relative">
+            <div
+              class="w-full min-h-30 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="inComImg1"
+                src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="inComTitle1">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <i class="fas fa-star text-yellow-500 content-right"></i>
+              </div>
+              <div>
+                <p class="text-sm font-medium text-gray-900" id="purRate1"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-span-1">
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="inComImg2"
+                src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="inComTitle2">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate2"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1 ">
+
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="inComImg3"
+                src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="inComTitle3">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate3"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="col-span-1 ">
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="inComImg4"
+                src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <h3 class="text-sm text-gray-700">
+                <a href="#" id="inComTitle4">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Basic Tee
+                </a>
+              </h3>
+              <div class="grid grid-rows-2">
+                <div>
+                  <i class="fas fa-star text-yellow-500 content-right"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-gray-900" id="purRate4"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1 ">
+          <div class="group relative">
+            <div
+              class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+              <img id="inComImg5"
+                src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                alt="Front of men&#039;s Basic Tee in black."
+                class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <div>
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="inComTitle5">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purRate5"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        </div>
+
+        <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  ">
+
+          <div class="col-span-1">
+            <div class="group relative">
+              <div
+                class="w-full min-h-30 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="inComImg6"
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="inComTitle6">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purRate6"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-1">
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="inComImg7"
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="inComTitle7">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purRate7"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-1 ">
+
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="inComImg8"
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="inComTitle8">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purRate8"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="col-span-1 ">
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="inComImg9"
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="inComTitle9">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purRate9"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-1 ">
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="inComImg10"
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="inComTitle10">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purRate10"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div>
+          <h1 class="text-red-600 text-3xl">Papular Series </h1>
+        </div>
+  
+        <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  ">
+  
+          <div class="col-span-1">
+            <div class="group relative">
+              <div
+                class="w-full min-h-30 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg1" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#" id="purSTitle1">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+                </div>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate1">$35</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+          <div class="col-span-1">
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg2" src="" alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#" id="purSTitle2">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+                </div>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate2" </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-span-1 ">
+  
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg3" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#" id="purSTitle3">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Basic Tee
+                    </a>
+                  </h3>
+                </div>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate3"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+  
+          <div class="col-span-1 ">
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg4" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div class="">
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#" id="purSTitle4">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Basic Tee
+                    </a>
+  
+                  </h3>
+  
+                </div>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate4"></p>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-span-1 ">
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg5" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purSTitle5">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate5"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+          </div>
+        </div>
+  
+      <div class="grid grid-cols-5 h-96 w-full  gap-20 py-3  ">
+  
+          <div class="col-span-1 ">
+            <div class="group relative">
+              <div
+                class="w-full min-h-30 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg6" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purSTitle6">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate6"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-span-1">
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg7" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purSTitle7">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate7"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-span-1 ">
+  
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg8" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purSTitle8">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate8"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+  
+  
+          <div class="col-span-1 ">
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg9" src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purSTitle9">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate9"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-span-1 ">
+            <div class="group relative">
+              <div
+                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
+                <img id="purSImg10"
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men&#039;s Basic Tee in black."
+                  class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+              </div>
+              <div class="mt-4 flex justify-between">
+                <h3 class="text-sm text-gray-700">
+                  <a href="#" id="purSTitle10">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Basic Tee
+                  </a>
+                </h3>
+                <div class="grid grid-rows-2">
+                  <div>
+                    <i class="fas fa-star text-yellow-500 content-right"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm font-medium text-gray-900" id="purSRate10"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+        </div>
+       
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Movie</title>
+  <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/tStyle.css">
+  <!-- <link rel="stylesheet" href="/css/webslides.css"> -->
+
+
+
+
+  <!-- <script src="https://kit.fontawesome.com/a55ca2877b.js" crossorigin="anonymous"></script> -->
+  <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/movieURL.js"></script>
+
+
+  <script src="js/app.js"></script>
+  <script src="js/favList.js"></script>
+  <script src="js/watchLater.js"></script>
+
+  <script src="js/movieDetails.js"></script>
+
+
+</head>
+
+<body>
+
+
+  <nav class="bg-gray-800">
+    <div class="grid grid-cols-12 space-x-2">
+
+      <div class=" col-start-2 col-span-2 text-red-600 self-end ">
+        <div class="grid grid-cols-4">
+          <div class="col-span-1">
+            <img class="" src="/img/icon.png" alt="">
+          </div>
+          <div class="col-span-3 text-2xl self-center">
+            Your Movie
+          </div>
+        </div>
+      </div>
+
+      <div class="text-white self-center text-center  text-1xl  col-start-4 rounded-lg hover:bg-red-600" id="moviesBar">
+        <a href="#" class="   "> Movies </a>
+      </div>
+      <div class="text-white self-center text-center  pl-1 text-1xl rounded-lg col-start-auto hover:bg-red-600"
+        id="moviesBar">
+        <a href="#"> Series </a>
+      </div>
+
+      <div class="col-span-3"></div>
+
+
+      <div
+        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-span-1 hover:bg-red-600  ">
+        <a href="#">
+          fav list </a>
+      </div>
+
+      <div
+        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-span-1  hover:bg-red-600  ">
+        <a href="#">
+          watch later </a>
+      </div>
+
+      <div
+        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-span-1  hover:bg-red-600 ">
+        <a href="#">
+          Sign out </a>
+      </div>
+
+
+
+
+
+    </div>
+  </nav>
+  <div class="grid grid-cols-12 h-64 drop-shadow-2xl  ">
+    <div class=" col-start-2 col-end-12 h-64 ">
+
+      <div class="bg-gray-800 grid grid-cols-6 h-10 grid-rows-1 items-center gap-x-0 space-x-0">
+        <div class="col-span-2"></div>
+        <div class="col-span-2 grid grid-rows-1 space-x-0 gap-0 ">
+          <div class="col-span-1 bg-red-600">
+            <input class=" rounded-sm border-2 border-red-600 w-80   " type="text" name="" id=""
+              placeholder="Movie name" />
+            <i class="text-white text-center"> Search </i>
+          </div>
+
+        </div>
+        <div class="col-span-1"></div>
+
+      </div>
+
+      <!-- <div class="col-start-4 col-end-9 bg-red-600 object-top"></div> -->
+
+      <!-- </div> -->
+
+      <div>
+        <h3 class="text-white h-5"></h3>
+      </div>
+
+
+      <div>
+        <iframe class="w-full h-96" src="">
+        </iframe>
+      </div>
+
+      <div class="grid grid-cols-5 pt-4">
+        <div class="col-span-1 space-y-5 ">
+          <img id="poster" src="" alt="" class="h-80 w-full">
+
+          <button class="text-white text-center bg-red-600 w-full" id="favButton" >add to Fav</button>
+          <button class="text-white text-center bg-red-600 w-full" id="watchButton" >add to Watch Later</button>
+
+        </div>
+        <div class="col-span-3  p-6 text-justify text-3xl">
+          <p id="overview"></p>
+        </div>
+        <div class="col-span-1 p-3 ">
+          <div class="grid-rows-2 ">
+            <div>
+               <div class="grid grid-cols-2  pt-4">
+                <div class="col-span-1 text-right  ">
+
+                  <i class="fas fa-star text-yellow-500  text-5xl  pr-4"></i>
+                </div>
+                <div class="col-span-1 ">
+                  <p class=" text-4xl text-left" id="rate"></p>
+                </div>
+              </div>
+            </div>
+            <div class=" pt-5 w-full h-40 space-y-5 gap-y-5 " id="rateButton">
+              <button class="text-white text-center bg-red-600 w-full" >Rate this movie</button>
+               </div>
+
+          </div>
+        </div>
+</body>
+
+</html>
