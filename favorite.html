@@ -20,9 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <script src="js/app.js"></script>
-
-  <script src="js/movieURL.js"></script>
-
+  <script src="js/favorite.js"></script>
 
 </head>
 
@@ -53,20 +51,18 @@
 
       <div class="col-span-3"></div>
 
-
       <div id="favorite"
-        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-start-9 col-end-10 hover:bg-red-600  ">
+        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-span-1 hover:bg-red-600  ">
         <a class="text-xl">
           Favorite list <i class="fas fa-heart  pl-2 text-2xl"></i> </a>
         </a>
       </div>
 
       <div id="watch"
-        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-start-10 col-end-11  hover:bg-red-600  ">
+        class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-span-1  hover:bg-red-600  ">
         <a class="text-xl">
           Watch list <i class="fas fa-bookmark  pl-2 text-2xl"></i> </a>
       </div>
-
 
 
 
@@ -89,71 +85,28 @@
         </div>
         <div class="col-span-1"></div>
 
-      </div>
-
-      <!-- <div class="col-start-4 col-end-9 bg-red-600 object-top"></div> -->
-
-      <!-- </div> -->
-
-      <div>
-        <h3 class="text-white h-5"></h3>
-      </div>
-
-      <div>
-        <h1 class="text-red-600 text-6xl">In theater </h1>
-      </div>
-
-      <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  " id="play1">
-
-       
 
 
       </div>
+      <div class="grid grid-cols-2 space-x-5">
 
-      <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  " id="play2">
-
-        
+        <div id="moviesC" class=" col-span-1" >
+          <div class="text-6xl text-red-600 text-center pt-6">Movies</div>
         </div>
-      <div>
 
-        <h1 class="text-red-600 text-6xl pb-3">Papular Movies </h1>
+        <div id="seriesC" class=" col-span-1" >
+          <div class="text-6xl text-center pt-6 text-red-600">Series</div>
+
+        </div>
+
       </div>
 
-      <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  " id="pubM1">
 
        
-      </div>
-
-      <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  " id="pubM2">
-
-       
-
-      </div>
-
-      <div>
-        <h1 class="text-red-600 text-6xl pb-4">Papular Series </h1>
-      </div>
-
-      <div class="grid grid-cols-5 h-96 w-full space-x-1 gap-20 py-3  " id="pubS1">
-
-      </div>
-
-      <div class="grid grid-cols-5 h-96 w-full  gap-20 py-3  " id="pubS2">
-
-       
-
-      </div>
-
-
+      
 
     </div>
-
-
   </div>
-
-
-
-
 </body>
 
 </html>

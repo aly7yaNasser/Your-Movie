@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/tStyle.css">
+        <!-- <link rel="stylesheet" href="/css/webslides.css"> -->
+      
+      
+      
+      
+        <!-- <script src="https://kit.fontawesome.com/a55ca2877b.js" crossorigin="anonymous"></script> -->
+        <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      
+        <script src="js/app.js"></script>
+      
+    </head>
+<body>
+
+
+    <nav class="bg-gray-800">
+      <div class="grid grid-cols-11 space-x-2">
+  
+        <div class=" col-start-2 col-span-2 text-red-600 self-end ">
+          <div class="grid grid-cols-4">
+            <div class="col-span-1">
+              <img class=" pt-2 pb-2  " src="/img/icon.png" alt="">
+            </div>
+            <div class="col-span-3 text-4xl self-center">
+              Your Movie
+            </div>
+          </div>
+        </div>
+  
+        <div class="text-white self-center text-center  text-1xl  col-start-4 rounded-lg hover:bg-red-600" id="moviesBar">
+          <i id="movies" class="  text-left text-2xl "> Movies </i>
+        </div>
+        <div class="text-white self-center text-center  pl-1 text-1xl rounded-lg col-start-auto hover:bg-red-600"
+          id="moviesBar">
+          <i id="series" class="text-2xl"> Series </i>
+        </div>
+  
+        <div class="col-span-3"></div>
+  
+  
+        <div id="favorite"
+          class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-start-9 col-end-10 hover:bg-red-600  ">
+          <a class="text-xl">
+            Favorite list <i class="fas fa-heart  pl-2 text-2xl"></i> </a>
+          </a>
+        </div>
+  
+        <div id="watch"
+          class="text-white  self-center  text-center   text-1xl rounded-lg justify-items-end col-start-10 col-end-11  hover:bg-red-600  ">
+          <a class="text-xl">
+            Watch list <i class="fas fa-bookmark  pl-2 text-2xl"></i> </a>
+        </div>
+  
+  
+  
+  
+  
+  
+  
+      </div>
+    </nav>
+    <div class="grid grid-cols-12 h-64 drop-shadow-2xl  ">
+      <div class=" col-start-2 col-end-12 h-64 ">
+  
+        <div class="bg-gray-800 grid grid-cols-6  grid-rows-1 items-center gap-x-0 space-x-0 h-20 ">
+          <div class="col-span-2"></div>
+          <div class="col-span-2 grid grid-rows-1 space-x-0 gap-0  ">
+            <div class="col-span-1 bg-red-600 h-10">
+              <input class=" rounded-sm  w-80 h-10 pl-4  " type="text" name="" id="" placeholder="Movie name" />
+              <i class="text-white pl-4 " onclick="search()"> Search </i>
+            </div>
+  
+          </div>
+          <div class="col-span-1"></div>
+  
+        </div>
+
+        
+      </div>
+    </div>
+</body>
+</html>

@@ -18,9 +18,10 @@ var     request_token;
 
 
 
-getTrnding(apiKey);
-getUpComing(apiKey);
-PurSeries(apiKey);
+// getTrnding(apiKey);
+// getUpComing(apiKey);
+// PurSeries(apiKey);
+getImg();
 if(session_id != undefined){
     // alert(session_id)
  
@@ -46,7 +47,31 @@ function getMovie(id){
 
 $(document).ready(function () {
 
+    $("#movies").click(function () { 
+        location.href=location.origin+"/movies.html";
+        
+        
+    });
     
+    
+    $("#series").click(function () { 
+        alert("ser")
+        location.href=window.origin+"/series.html";
+
+    });
+
+    $("#favorite").click(function () { 
+        location.href=location.origin+"/favorite.html";
+        
+        
+    });
+    
+    
+    $("#watch").click(function () { 
+        location.href=window.origin+"/watch.html";
+
+    });
+
     
 // $(".relative").click(function (e) { 
 //     alert($(this).closest("a").text())
@@ -95,4 +120,9 @@ function getWatch(){
         return "error"
     })
 
+}
+
+function search(){
+    console.log(window.origin+"/search.html?search="+$("input").val())
+    location.href=window.origin+"/search.html?search="+$("input").val();
 }
